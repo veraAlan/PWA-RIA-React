@@ -1,0 +1,19 @@
+.createTask {
+   border: 2px solid white;
+   padding: 2em;
+   margin: 2em;
+}
+
+.text {
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.list {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.listItem {
+   width: fit-content;
+   padding: 2em;
+}

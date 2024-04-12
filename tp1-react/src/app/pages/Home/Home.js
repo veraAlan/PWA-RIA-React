@@ -3,6 +3,7 @@ import { useState } from "react";
 import Task from "../../components/Task/Task.jsx";
 import Input from "../../components/Input/Input.jsx";
 import Button from "../../components/Button/Button.jsx";
+import style from "./Home.module.css";
 
 // Preload tasks data.
 const data1 = { id: 0, info: "data n1", completed: false };
@@ -42,16 +43,16 @@ const Home = () => {
          <div>
             This page is the home
          </div>
-         <div>
-            <Input value={inputValue} onChangeHandler={onChangeHandler} />
+         <div className={style.createTask}>
+            <Input className={style.text} value={inputValue} onChangeHandler={onChangeHandler} />
 
-            <Button text="Create" onClickFn={createTask} />
+            <Button className={style.text} text="Create" onClickFn={createTask} />
          </div>
          <br />
-         <ul>
+         <ul className={style.list} >
             {taskList.map((data) => {
-               return <li key={data.id}>{Task(data.info, data.completed)}
-                  <Button text="Complete" onClickFn={() => updateTask(data.id)} />
+               return <li className={style.listItem} key={data.id}>{Task(data.info, data.completed)}
+                  <Button className={style.text} text="Complete" onClickFn={() => updateTask(data.id)} />
                </li>;
             })}
          </ul>
