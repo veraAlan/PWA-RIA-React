@@ -10,28 +10,25 @@ const data2 = { id: 1, info: "data n2", completed: false };
 const data3 = { id: 2, info: "data n3", completed: false };
 const preloadTaskList = [data1, data2, data3];
 
-let nextId = 0;
+// Set initial id at the last item of array.
+// If the numeration changes, this is the place to set first value correspoding new method.
+let preloadId = Number([preloadTaskList.length - 1]) + 1;;
 
 const Home = () => {
-   // Setting nextId for preload.
-   nextId = Number([preloadTaskList.length - 1]);
-
    const [inputValue, setInputValue] = useState("");
    const [taskList, setTaskState] = useState(preloadTaskList);
+   const [nextId, setNextId] = useState(preloadId);
 
    const updateTask = (index) => {
       const updatedTask = [...taskList];
       (updatedTask[index]).completed = true;
       setTaskState(updatedTask);
-      // console.log(updatedTask); Debugging
    };
 
    const onChangeHandler = (event) => { setInputValue(event.target.value); };
 
    const createTask = () => {
-      // TODO solve: For some reason not updating nextId in Home() scope.
-      // Not even nextId++ not += 1;
-      nextId = Number([preloadTaskList.length - 1]) + 1;
+      setNextId(nextId + 1);
       const newTask = {
          id: nextId,
          info: inputValue,
