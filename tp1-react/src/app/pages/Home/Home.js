@@ -9,7 +9,8 @@ import style from "./Home.module.css";
 const data1 = { id: 0, info: "data n1", completed: false };
 const data2 = { id: 1, info: "data n2", completed: false };
 const data3 = { id: 2, info: "data n3", completed: false };
-const preloadTaskList = [data1, data2, data3];
+const data4 = { id: 3, info: "data n3", completed: true };
+const preloadTaskList = [data1, data2, data3, data4];
 
 // Set initial id at the last item of array.
 // If the numeration changes, this is the place to set first value correspoding new method.
@@ -43,19 +44,29 @@ const Home = () => {
          <div>
             This page is the home
          </div>
-         <div className={style.createTask}>
-            <Input className={style.text} value={inputValue} onChangeHandler={onChangeHandler} />
+         <div className={style.container}>
+            <div className={style.containerItem}>
+               <div className={style.createTask}>
+                  <Input className={style.text} value={inputValue} onChangeHandler={onChangeHandler} />
 
-            <Button className={style.text} text="Create" onClickFn={createTask} />
+                  <Button className={style.text} text="Create" onClickFn={createTask} />
+               </div>
+            </div>
+            <div className={style.containerItem}>
+               <ul className={style.list} >
+                  {taskList.map((data) => {
+                     return <li className={style.listItem} key={data.id}>{Task(data.info, data.completed)}
+                        <Button className={style.text} text="Complete" onClickFn={() => updateTask(data.id)} />
+                     </li>;
+                  })}
+               </ul>
+            </div>
+            <div className={style.containerItem}>
+               <ul className={style.list}>
+
+               </ul>
+            </div>
          </div>
-         <br />
-         <ul className={style.list} >
-            {taskList.map((data) => {
-               return <li className={style.listItem} key={data.id}>{Task(data.info, data.completed)}
-                  <Button className={style.text} text="Complete" onClickFn={() => updateTask(data.id)} />
-               </li>;
-            })}
-         </ul>
       </main>
    );
 }
