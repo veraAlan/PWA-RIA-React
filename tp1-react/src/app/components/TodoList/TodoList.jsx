@@ -34,6 +34,13 @@ const TodoForm = () => {
         setDoneTaskState([...doneTaskList, updatedTask]);
     };
 
+    const eliminateTask = (idEliminate) => {
+        const newTaskList = taskList.filter((task) => task.id !== idEliminate);
+        setTaskState(newTaskList);
+
+    };
+
+
     return (
         <>
             <div className={style.containerItem}>
@@ -52,6 +59,7 @@ const TodoForm = () => {
                         taskList.map((data) => {
                             return <li className={style.listItem} key={data.id}>{Task(data.info, data.completed)}
                                 <Button className={style.text} text="Complete" onClickFn={() => updateTask(data.id)} />
+                                <Button className={style.text} text="Eliminate" onClickFn={() => eliminateTask(data.id)} />
                             </li>;
                         })
                     }
