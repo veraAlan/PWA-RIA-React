@@ -1,7 +1,8 @@
 .button {
+   font-size: large;
    border-radius: 5px;
    background-color: #0f0017cb;
-   /* Change for better proportions, maybe im */
-   padding: 3px;
+   padding: 5px;
    margin-left: 5px;
+   width: fit-content;
 }

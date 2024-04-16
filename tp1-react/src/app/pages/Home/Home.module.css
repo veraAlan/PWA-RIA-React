@@ -1,11 +1,12 @@
 .createTask {
    border: 1px solid white;
    padding: 1em;
-   width: 100%;
+   display: flex;
+   flex-wrap: nowrap;
 }
 
 .text {
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .list {

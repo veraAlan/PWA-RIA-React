@@ -45,7 +45,7 @@ const TodoForm = () => {
         <>
             <div className={style.containerItem}>
                 <div className={style.createTask}>
-                    <Input className={style.text} value={inputValue} onChangeHandler={onChangeHandler} />
+                    <Input className={style.text} placeholder="This text" value={inputValue} onChangeHandler={onChangeHandler} />
 
                     <Button className={style.text} text="Create" onClickFn={createTask} />
                 </div>
