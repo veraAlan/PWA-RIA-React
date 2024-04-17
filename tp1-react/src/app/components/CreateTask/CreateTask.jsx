@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
-import { TaskDispatchContext } from "../TaskContext/TaskContext.jsx";
+import { TaskDispatchContext } from "../TaskContext/TaskContext";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 
-let nextId = 3;
+let nextId = 9;
 
 export default function CreateTask() {
     const dispatch = useContext(TaskDispatchContext);
@@ -25,8 +25,5 @@ export default function CreateTask() {
                 });
             }}
         />
-        <div>
-            Contador
-        </div>
     </div>);
 }

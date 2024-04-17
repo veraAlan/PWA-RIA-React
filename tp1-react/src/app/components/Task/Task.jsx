@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import Button from "../Button/Button.jsx";
-import { TaskDispatchContext } from "../TaskContext/TaskContext.jsx";
+import Button from "../Button/Button";
+import { TaskDispatchContext } from "../TaskContext/TaskContext";
 
 export default function Task({ task, hasButtons }) {
    const dispatch = useContext(TaskDispatchContext);
