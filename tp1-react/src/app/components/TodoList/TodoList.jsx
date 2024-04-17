@@ -68,17 +68,7 @@ const TodoForm = () => {
             </div>
             <div className={style.containerItem}>
                 <p>Cantidad de tareas pendientes: {tareasPendientes}</p>
-                <Input className={style.text} placeholder='search' value={search} onChangeHandler={searcher} />
-                <ul className={style.list} >
-                    {
-                        result.map((data) => {
-                            return <li className={style.listItem} key={data.id}>{Task(data.info, data.completed)}
-                                <Button className={style.text} text="Complete" onClickFn={() => updateTask(data.id)} />
-                                <Button className={style.text} text="Eliminate" onClickFn={() => eliminateTask(data.id)} />
-                            </li>;
-                        })
-                    }
-                </ul>
+
             </div>
             <div className={style.containerItem}>
                 <p>Cantidad de tareas Completadas: {tareasCompletadas}</p>

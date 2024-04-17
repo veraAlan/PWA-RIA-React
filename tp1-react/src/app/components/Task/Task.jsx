@@ -1,14 +1,30 @@
-const Task = (data, isCompleted) => {
-   var completed = "IN PROGRESS";
-   if (isCompleted) {
-      completed = "DONE";
-   } else {
-      completed = "IN PROGRESS";
+import { useContext } from "react";
+import Button from "../Button/Button.jsx";
+import { TaskDispatchContext } from "../TaskContext/TaskContext.jsx";
+
+export default function Task({ task, hasButtons }) {
+   const dispatch = useContext(TaskDispatchContext);
+   let state = "COMPLETED";
+   let buttons = <></>;
+
+   if (hasButtons === false) {
+      state = "IN PROGRESS";
+      buttons = <><Button text="Complete" onClickFn={() => {
+         dispatch({
+            type: 'complete',
+            id: task.id
+         });
+      }} />
+         <Button text="Delete" onClickFn={() => {
+            dispatch({
+               type: 'delete',
+               id: task.id
+            });
+         }} /></>;
    }
 
-   return (
-      <div key={data}>{data} : {completed}</div>
-   );
+   return (<li>
+      {task.info} : {state}
+      {buttons}
+   </li >);
 }
-
-export default Task;
