@@ -13,6 +13,9 @@ const TodoForm = () => {
     const [inputValue, setInputValue] = useState("");
     const [nextId, setNextId] = useState(0);
     const onChangeHandler = (event) => { setInputValue(event.target.value); };
+    const tareasPendientes = taskList.length;
+    const tareasCompletadas = doneTaskList.length;
+    const [search, setSearch] = useState("");
 
     const createTask = () => {
         setNextId(nextId + 1);
@@ -37,9 +40,19 @@ const TodoForm = () => {
     const eliminateTask = (idEliminate) => {
         const newTaskList = taskList.filter((task) => task.id !== idEliminate);
         setTaskState(newTaskList);
-
     };
 
+    const searcher = (e) => {
+        setSearch(e.target.value)
+    }
+
+    let result = []
+    if (!search) {
+        result = taskList
+    } else {
+        result = taskList.filter((task) => task.info.toLowerCase().includes(search.toLocaleLowerCase()))
+        console.log(result);
+    }
 
     return (
         <>
@@ -54,9 +67,11 @@ const TodoForm = () => {
                 </div>
             </div>
             <div className={style.containerItem}>
+                <p>Cantidad de tareas pendientes: {tareasPendientes}</p>
+                <Input className={style.text} placeholder='search' value={search} onChangeHandler={searcher} />
                 <ul className={style.list} >
                     {
-                        taskList.map((data) => {
+                        result.map((data) => {
                             return <li className={style.listItem} key={data.id}>{Task(data.info, data.completed)}
                                 <Button className={style.text} text="Complete" onClickFn={() => updateTask(data.id)} />
                                 <Button className={style.text} text="Eliminate" onClickFn={() => eliminateTask(data.id)} />
@@ -66,6 +81,7 @@ const TodoForm = () => {
                 </ul>
             </div>
             <div className={style.containerItem}>
+                <p>Cantidad de tareas Completadas: {tareasCompletadas}</p>
                 <ul className={style.list}>
                     {
                         doneTaskList.map((data) => {
