@@ -2,13 +2,14 @@
 .input::placeholder {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    font-size: large;
-   font-weight: bold;
+   font-weight: normal;
 }
 
 .input {
-   border-radius: 5px;
-   padding: 5px;
-   width: 100%;
+   margin: 0.5em 0.2em;
+   border-radius: 20px;
+   padding: 0.2em 0.5em;
+   width: 90%;
 }
 
 .input::placeholder {

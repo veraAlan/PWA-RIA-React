@@ -19,7 +19,7 @@ export default function Home() {
    const [tasks, dispatch] = useReducer(taskReducer, initialTasks);
 
    return (
-      <TaskContext.Provider value={tasks}>
+      <TaskContext.Provider value={tasks} className={style.base}>
          <TaskDispatchContext.Provider value={dispatch}>
             <Title text="Welcome, feel free to create new tasks!" />
             <div className={style.containerItem}>
