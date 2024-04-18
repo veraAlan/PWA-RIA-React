@@ -8,14 +8,22 @@ export default function TodoList({ completed }) {
     const tasksLoaded = useContext(TaskContext);
     if (tasksLoaded.length) {
         const tasks = tasksLoaded.filter((task) => task.completed === completed);
-        return <ul className={style.list}>
-            {
-                tasks.map((task) => {
-                    return <Task key={"task" + task.id} task={task} hasButtons={completed} />;
-                })
-            }
-        </ul>;
-    } else {
+        // console.log(tasks);
+        // console.log("Este es taskLoaded: ");
+        console.log(tasksLoaded);
+    if(tasks[0] == null){    
         return <Title text="There are no tasks."></Title>
+
+    } else {
+        return <ul className={style.list}>
+        {
+            tasks.map((task) => {
+                return <Task key={"task" + task.id} task={task} hasButtons={completed} />;
+            })
+        }
+    </ul>;
+    }
+    } else {
+        return <Title text="There are no tasks."></Title>  
     }
 }
