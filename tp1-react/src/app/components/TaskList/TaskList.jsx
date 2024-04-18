@@ -10,7 +10,6 @@ export default function TodoList({ completed }) {
         const tasks = tasksLoaded.filter((task) => task.completed === completed);
         if (tasks[0] == null) {
             return <Title text="There are no tasks."></Title>
-
         } else {
             return <ul className={style.list}>
                 {

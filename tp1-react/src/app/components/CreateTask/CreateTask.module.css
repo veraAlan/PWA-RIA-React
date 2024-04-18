@@ -1,8 +1,18 @@
-.container {
-   width: 100%;
+.container,
+.input,
+.btn {
    padding: 0.5em;
 }
 
+.container {
+   width: 100%;
+}
+
 .input {
+   width: calc(100% - 60px);
    border-radius: 20px 0 0 20px;
+}
+
+.btn {
+   border-radius: 0 20px 20px 0;
 }

@@ -12,14 +12,14 @@ export default function Search({ completed }) {
       setResultSearch(tasks.filter((task) => { return task.info.toLowerCase().includes(query.toLocaleLowerCase()) }));
    }
 
-   return (<><Input placeholder='search' onChangeHandler={(e) => {
+   return (<div className={style.searchbox}><Input placeholder='Search a task here...' className={style.input} onChangeHandler={(e) => {
       search(e.target.value);
-   }} /><ul className={style.searchbox}>
+   }} /><ul>
          {
             resultSearch.map((task) => {
                return <Task key={"task" + task.id} task={task} hasButtons={completed} />;
             })
          }
       </ul>
-   </>);
+   </div>);
 }

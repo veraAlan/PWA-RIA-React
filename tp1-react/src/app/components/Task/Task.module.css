@@ -1,0 +1,44 @@
+.card {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   margin: 0.2em 0;
+}
+
+.taskProc {
+   width: 100%;
+   border: 2px solid var(--border-task);
+   padding: 0.5em;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: space-between;
+   border-radius: 20px 0 0 20px;
+}
+
+.taskCom {
+   width: 100%;
+   border: 2px solid var(--border-done-task);
+   padding: 0.5em;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: space-between;
+   border-radius: 20px;
+}
+
+.btns {
+   width: fit-content;
+   display: flex;
+   flex-direction: column;
+}
+
+.btnTop {
+   border-color: var(--border-complete-btn);
+   background-color: var(--bg-complete-btn);
+   border-radius: 0 10px 0 0;
+}
+
+.btnBot {
+   border-color: var(--border-delete-btn);
+   background-color: var(--bg-delete-btn);
+   border-radius: 0 0 10px 0;
+}

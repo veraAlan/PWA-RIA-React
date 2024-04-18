@@ -1,9 +1,8 @@
 .button {
-   font-size: normal;
+   font-family: var(--font-family);
    font-weight: 700;
-   border-radius: 20px;
-   background-color: #343434;
-   padding: 0.2em;
-   margin-left: 0.2em;
-   width: fit-content;
+   background-color: var(--bg-btn-pill);
+   border: 1px solid var(--border-btn-pill);
+   width: 6em;
+   height: 2.5em;
 }
