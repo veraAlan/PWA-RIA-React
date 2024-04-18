@@ -4,24 +4,16 @@
    justify-content: center;
 }
 
+.pill {
+   border: 2px solid var(--border-btn-pill);
+   padding: 0.2em 0.5em;
+   margin: 0 -0.1em 1em -0.1em;
+}
+
 .counter>:nth-child(1) {
-   width: fit-content;
-   padding: 0 1em;
-   font-size: 1.5em;
-   font-weight: 700;
+   border-radius: 20px 0 0 20px;
 }
 
-.divValues {
-   margin: 0.2em 1em;
-}
-
-.value {
-   margin: 0.2em 0.2em;
-   width: fit-content;
-   height: fit-content;
-   border: 1px solid white;
-   border-radius: 20px;
-   padding: 0 0.5em;
-   font-size: 1em;
-   font-weight: 700;
+.counter>:nth-child(2) {
+   border-radius: 0 20px 20px 0;
 }

@@ -7,10 +7,7 @@ export default function Counter() {
    const complete = useContext(TaskContext).length - incomplete;
 
    return (<div className={counter.counter}>
-      <span> Task Counter </span>
-      <div className={counter.divValues}>
-         <span className={counter.value}>Completed: {complete}</span>
-         <span className={counter.value}>Incompleted: {incomplete}</span>
-      </div>
-   </div >);
+      <span className={counter.pill}>Completed: {complete}</span>
+      <span className={counter.pill}>Incompleted: {incomplete}</span>
+   </div>);
 }

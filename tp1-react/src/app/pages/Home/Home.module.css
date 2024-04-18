@@ -1,10 +1,15 @@
-.createTask {
-   border: 1px solid white;
-   padding: 1em;
+.container {
    display: flex;
-   flex-wrap: nowrap;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--bg-container);
 }
 
-.text {
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
+.containerItem {
+   width: calc(100% - 1.5em);
+   border: 1px solid var(--border-container);
+   box-shadow: 3px 3px 5px 0px var(--shadow-container);
+   background-color: var(--bg-container);
+   border-radius: 10px;
+   margin: 0.8em 1.5em;
 }

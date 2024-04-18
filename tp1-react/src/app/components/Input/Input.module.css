@@ -1,17 +1,9 @@
-.input,
-.input::placeholder {
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   font-size: large;
-   font-weight: normal;
-}
-
 .input {
-   margin: 0.5em 0.2em;
-   border-radius: 20px;
-   padding: 0.2em 0.5em;
-   width: 90%;
+   font-family: var(--font-family);
+   font-weight: bold;
+   border: 2px solid var(--border-input);
 }
 
 .input::placeholder {
-   color: rgb(126, 126, 126);
+   color: var(--text-gray);
 }

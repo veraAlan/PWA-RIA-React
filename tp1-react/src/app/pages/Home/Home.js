@@ -26,20 +26,22 @@ export default function Home() {
    const [tasks, dispatch] = useReducer(taskReducer, initialTasks);
 
    return (
-      <TaskContext.Provider value={tasks} className={style.base}>
+      <TaskContext.Provider value={tasks}>
          <TaskDispatchContext.Provider value={dispatch}>
-            <Title text="Welcome, feel free to create new tasks!" />
-            <div className={style.containerItem}>
-               <CreateTask />
-               <Counter />
-            </div>
-            <div className={style.containerItem}>
-               <Search completed={false} />
-               <TaskList completed={false} />
-            </div>
-            <div className={style.containerItem}>
-               <Search completed={true} />
-               <TaskList completed={true} />
+            <div className={style.container}>
+               <Title text="Welcome, feel free to create new tasks!" className={style.title} />
+               <div className={style.containerItem}>
+                  <CreateTask />
+                  <Counter />
+               </div>
+               <div className={style.containerItem}>
+                  <Search completed={false} />
+                  <TaskList completed={false} />
+               </div>
+               <div className={style.containerItem}>
+                  <Search completed={true} />
+                  <TaskList completed={true} />
+               </div>
             </div>
          </TaskDispatchContext.Provider>
       </TaskContext.Provider>
@@ -62,6 +64,8 @@ function taskReducer(tasks, action) {
          });
       case 'delete':
          return tasks.filter((task) => task.id !== action.id);
+      case 'search':
+         return '';
       default: {
          throw Error('Unknown action: ' + action.type);
       }

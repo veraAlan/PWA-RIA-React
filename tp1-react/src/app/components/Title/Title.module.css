@@ -1,4 +1,9 @@
+/* Mobile Style */
 .title {
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   padding: 1em 1em 0.1em 1em;
+   font-family: var(--font-family);
+   font-size: 2em;
+   margin: 1em 0;
+   text-align: center;
 }
+
+/* Desktop Style */
