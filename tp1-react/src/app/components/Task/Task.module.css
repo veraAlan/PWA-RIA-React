@@ -44,7 +44,7 @@
 }
 
 /* Medium display */
-@media (min-width: 765px) {
+@media (min-width: 768px) {
    .card {
       flex-direction: column;
       align-items: stretch;
