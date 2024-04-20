@@ -31,7 +31,7 @@ package-json.js: contiene la referencia (en JSON) de las librerias instaladas po
 
 ### Estructura
 
-```bash
+```
 E:\CODING\WORKSPACES\VISUAL STUDIO\GITHUB\TESTEST\PWA-RIA-REACT
 │   .gitattributes
 │   .gitignore
