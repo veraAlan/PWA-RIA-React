@@ -1,0 +1,35 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   right: 3em;
+   bottom: 1em;
+   background-color: #2f2204;
+   border: 2px solid #373b1a;
+   border-radius: 5px;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 0.5s, visibility 0.5s;
+}
+
+.text {
+   font-size: 1.5em;
+   padding: 1em;
+}
+
+.loadingBar {
+   width: 99%;
+   align-self: center;
+   border-top: 2px solid;
+   border-radius: 20px;
+}
+
+.container.show {
+   visibility: visible;
+   opacity: 1;
+}
+
+.container.hide {
+   visibility: hidden;
+   opacity: 0;
+}
