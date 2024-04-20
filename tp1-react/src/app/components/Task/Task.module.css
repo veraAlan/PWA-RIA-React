@@ -8,7 +8,7 @@
 .taskProc {
    width: 100%;
    border: 2px solid var(--border-task);
-   padding: 0.5em;
+   padding: 0.5em 1em;
    flex-wrap: nowrap;
    align-items: center;
    justify-content: space-between;
@@ -41,4 +41,73 @@
    border-color: var(--border-delete-btn);
    background-color: var(--bg-delete-btn);
    border-radius: 0 0 10px 0;
+}
+
+/* Medium display */
+@media (min-width: 765px) {
+   .card {
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 1em;
+   }
+
+   .card:has(.taskProc) {
+      border: 2px solid var(--border-task);
+      border-radius: 15px;
+      padding: 0.5em;
+   }
+
+   .btns {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+   }
+
+   .taskProc,
+   .taskCom {
+      font-size: 0.8em;
+      border-radius: 20px;
+   }
+
+   .icon {
+      border: 2px solid white;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+   }
+
+   .btnTop>.icon {
+      color: var(--bg-complete-btn);
+   }
+
+   .btnBot>.icon {
+      color: var(--bg-delete-btn);
+   }
+
+   .btnTop,
+   .btnBot {
+      margin: 0 5px;
+      border: none;
+      background-color: var(--bg-container);
+      width: fit-content;
+      height: fit-content;
+      display: flex;
+      margin-top: 0.5em;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+/* Large display */
+@media (min-width:1200px) {
+   .icon {
+      width: 50px;
+      height: 50px;
+   }
+
+   .taskProc,
+   .taskCom {
+      font-size: 1em;
+   }
 }

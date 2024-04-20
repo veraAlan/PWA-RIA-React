@@ -6,3 +6,11 @@
    width: 6em;
    height: 2.5em;
 }
+
+/* Medium display */
+@media all and (min-width: 765px) {
+   .button {
+      font-size: 1.2em;
+      height: 2.6em;
+   }
+}

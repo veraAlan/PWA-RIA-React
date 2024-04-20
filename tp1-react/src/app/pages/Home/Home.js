@@ -6,6 +6,7 @@ import CreateTask from "../../components/CreateTask/CreateTask";
 import Counter from "../../components/Counter/Counter";
 import Search from '../../components/Search/Search';
 import { TaskContext, TaskDispatchContext } from '../../components/TaskContext/TaskContext';
+import { FaClipboardList } from "react-icons/fa";
 
 // Check utility
 import style from "./Home.module.css";
@@ -29,16 +30,16 @@ export default function Home() {
       <TaskContext.Provider value={tasks}>
          <TaskDispatchContext.Provider value={dispatch}>
             <div className={style.container}>
-               <Title text="Welcome, feel free to create new tasks!" className={style.title} />
+               <Title text="Welcome, feel free to create new tasks!" icon={<FaClipboardList />} className={style.title} />
                <div className={style.containerItem}>
                   <CreateTask />
                   <Counter />
                </div>
-               <div className={style.containerItem}>
+               <div className={`${style.containerItem} ${style.tasks}`}>
                   <Search completed={false} />
                   <TaskList completed={false} />
                </div>
-               <div className={style.containerItem}>
+               <div className={`${style.containerItem} ${style.tasks}`}>
                   <Search completed={true} />
                   <TaskList completed={true} />
                </div>

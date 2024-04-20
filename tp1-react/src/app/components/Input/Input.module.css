@@ -7,3 +7,10 @@
 .input::placeholder {
    color: var(--text-gray);
 }
+
+/* Medium display */
+@media all and (min-width: 765px) {
+   .input {
+      font-size: 1.5em;
+   }
+}

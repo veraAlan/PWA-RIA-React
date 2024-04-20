@@ -2,3 +2,11 @@
    list-style: none;
    padding: 1em;
 }
+
+/* Medium display */
+@media all and (min-width: 765px) {
+   .list {
+      overflow-y: scroll;
+      font-size: 1.5em;
+   }
+}

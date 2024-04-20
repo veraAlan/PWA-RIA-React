@@ -17,3 +17,22 @@
 .counter>:nth-child(2) {
    border-radius: 0 20px 20px 0;
 }
+
+/* Medium display */
+@media (min-width: 768px) {
+   .pill {
+      font-size: 1em;
+      padding: 0.5em 0.8em;
+      margin: 1em -0.1em 2em -0.1em;
+   }
+}
+
+
+/* Large display */
+@media (min-width:1200px) {
+   .pill {
+      font-size: 1.5em;
+      padding: 0.5em 0.8em;
+      margin: 1em -0.1em 2em -0.1em;
+   }
+}

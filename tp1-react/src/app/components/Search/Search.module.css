@@ -11,3 +11,17 @@
    width: 100%;
    border-radius: 10px 10px 0 0 !important;
 }
+
+/* Medium display */
+@media (min-width: 768px) {
+   .input {
+      font-size: 1em;
+   }
+}
+
+/* Large display */
+@media (min-width: 1200px) {
+   .input {
+      font-size: 1.5em;
+   }
+}

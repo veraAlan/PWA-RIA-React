@@ -1,9 +1,9 @@
 import style from "./Title.module.css";
 
-const Title = ({ text }) => {
+const Title = ({ text, className, icon }) => {
    return (
-      <h1 className={style.title}>
-         {text}
+      <h1 className={`${style.title} ${className}`}>
+         {icon} {text}
       </h1>
    );
 };

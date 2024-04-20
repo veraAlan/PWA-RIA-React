@@ -5,7 +5,9 @@
 }
 
 .container {
+   display: flex;
    width: 100%;
+   align-items: center;
 }
 
 .input {
@@ -15,4 +17,22 @@
 
 .btn {
    border-radius: 0 20px 20px 0;
+}
+
+/* Medium display */
+@media (min-width: 768px) {
+
+   .input,
+   .btn {
+      font-size: 1em;
+   }
+}
+
+/* Large display */
+@media (min-width: 1200px) {
+
+   .input,
+   .btn {
+      font-size: 1.5em;
+   }
 }
