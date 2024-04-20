@@ -35,6 +35,7 @@ export default function Home() {
                   <CreateTask />
                   <Counter />
                </div>
+               {/* Correct style, ir goes over the screen on the bottom of the list. */}
                <div className={`${style.containerItem} ${style.tasks}`}>
                   <Search completed={false} />
                   <TaskList completed={false} />
