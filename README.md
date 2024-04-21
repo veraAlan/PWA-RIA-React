@@ -2,15 +2,9 @@
 
 Repositorio para la materia Programacion Avanzada respecto a los proyectos de RIA+REACT.
 
-## Instrucciones de uso
-1. Clonar el repositorio en tu carpeta de preferencia con el siguiente comando: git clone https://github.com/veraAlan/PWA-RIA-React.git
-2. Instalar todas las librerias necesarias con el comando ```npm install```
-3. Posicionarse en /tp1-react con ```cd /tp1-react```
-4. Abrir el servidor con el comando ```npm run dev``` (Falta hacer build)
-5. ir a la direccion: http://localhost:3000/
+Preview del proyecto en [README.MD](tp1-react/README.md)
 
-### Integrantes del grupo
-
+## Integrantes del grupo
 
 - **Vera Alan Cristian Gaston** 
     - Legajo FAI - 2622  
@@ -20,9 +14,20 @@ Repositorio para la materia Programacion Avanzada respecto a los proyectos de RI
     - Legajo FAI - 2339
     - Mail Personal: santiago.yaitul@est.fi.uncoma.edu.ar
     - Usuario GitHub: SantiagoYaitul
-
 ---
-### Funciones principales
+
+## Requisitos
+Tener instalado [NodeJS](https://nodejs.org/en/download)
+
+## Instrucciones de uso
+
+1. Clonar el repositorio en tu carpeta de preferencia con el siguiente comando: ```git clone https://github.com/veraAlan/PWA-RIA-React.git```
+2. Instalar todas las librerias necesarias con el comando ```npm install```
+3. Posicionarse en /tp1-react con ```cd /tp1-react```
+4. Abrir el servidor local con el comando ```npm run dev```
+5. ir a la direccion: http://localhost:3000/
+
+## Funciones principales
 
 ***index.js*** : archivo comunmente default de routing, en la mayoria de frameworks este es el archivo con las funciones de renderizado del DOM. En nuetro proyecto se encuentra en app/page.js tenemos nuestro entry point.
  
@@ -33,7 +38,7 @@ Repositorio para la materia Programacion Avanzada respecto a los proyectos de RI
 ***package-json.js***: contiene la referencia (en JSON) de las librerias instaladas por NPM, aqui se puede agregar manualmente una libreria para instalar con "npm install".
  
 
-### Estructura
+## Estructura
 
 ```
 E:\CODING\WORKSPACES\VISUAL STUDIO\GITHUB\TESTEST\PWA-RIA-REACT
@@ -48,11 +53,7 @@ E:\CODING\WORKSPACES\VISUAL STUDIO\GITHUB\TESTEST\PWA-RIA-REACT
     │   package-lock.json
     │   package.json
     │   README.md
-    │
     ├───public
-    │       next.svg
-    │       vercel.svg
-    │
     └───src
         └───app
             │   favicon.ico
@@ -60,47 +61,36 @@ E:\CODING\WORKSPACES\VISUAL STUDIO\GITHUB\TESTEST\PWA-RIA-REACT
             │   layout.js
             │   page.js
             │   page.module.css
-            │
             ├───components
             │   ├───Button
             │   │       Button.jsx
             │   │       Button.module.css
-            │   │
             │   ├───Counter
             │   │       Counter.jsx
             │   │       Counter.module.css
-            │   │
             │   ├───CreateTask
             │   │       CreateTask.jsx
             │   │       CreateTask.module.css
-            │   │
             │   ├───Input
             │   │       Input.jsx
             │   │       Input.module.css
-            │   │
             │   ├───Search
             │   │       Search.jsx
             │   │       Search.module.css
-            │   │
             │   ├───Task
             │   │       Task.jsx
             │   │       Task.module.css
-            │   │
             │   ├───TaskContext
             │   │       TaskContext.jsx
-            │   │
             │   ├───TaskList
             │   │       TaskList.jsx
             │   │       TaskList.module.css
-            │   │
             │   ├───Title
             │   │       Title.jsx
             │   │       Title.module.css
-            │   │
             │   └───Toast
             │           Toast.jsx
             │           Toast.module.css
-            │
             └───pages
                 └───Home
                         Home.js
