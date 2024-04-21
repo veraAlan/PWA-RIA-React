@@ -22,12 +22,16 @@ Repositorio para la materia Programacion Avanzada respecto a los proyectos de RI
     - Usuario GitHub: SantiagoYaitul
 
 ---
-### Funciones
+### Funciones principales
 
-index.js : archivo comunmente default de routing, en la mayoria de frameworks este es el archivo con las funciones de renderizado del DOM. En nuetro proyecto se encuentra en app/page.js tenemos nuestro entry point.
-App.js: El componente principal de la aplicacion, aqui se encuentra la logica de la aplicacion. En el caso de este proyecto, nuestra App es "Home.js" por ser creado con NextJS
-index.css: Archivo de estilazado global, contiene las variables que pueden usarse en todo el proyecto, como configuraciones base de html/body o incluso * (wildcards).
-package-json.js: contiene la referencia (en JSON) de las librerias instaladas por NPM, aqui se puede agregar manualmente una libreria para instalar con "npm install".
+***index.js*** : archivo comunmente default de routing, en la mayoria de frameworks este es el archivo con las funciones de renderizado del DOM. En nuetro proyecto se encuentra en app/page.js tenemos nuestro entry point.
+ 
+***App.js***: El componente principal de la aplicacion, aqui se encuentra la logica de la aplicacion. En el caso de este proyecto, nuestra App es "Home.js" por ser creado con NextJS.
+ 
+***index.css***: Archivo de estilazado global, contiene las variables que pueden usarse en todo el proyecto, como configuraciones base de html/body o incluso * (wildcards).
+ 
+***package-json.js***: contiene la referencia (en JSON) de las librerias instaladas por NPM, aqui se puede agregar manualmente una libreria para instalar con "npm install".
+ 
 
 ### Estructura
 
