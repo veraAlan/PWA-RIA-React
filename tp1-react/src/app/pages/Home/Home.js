@@ -11,15 +11,15 @@ import { FaClipboardList } from "react-icons/fa";
 import style from "./Home.module.css";
 
 const initialTasks = [
-   { id: 0, info: 'data 1', completed: true, inSearch: true },
-   { id: 1, info: 'data 2', completed: false, inSearch: true },
-   { id: 2, info: 'data 3', completed: false, inSearch: true },
-   { id: 3, info: 'data 4', completed: false, inSearch: true },
-   { id: 4, info: 'data 5', completed: true, inSearch: true },
-   { id: 5, info: 'data 6', completed: true, inSearch: true },
-   { id: 6, info: 'data 7', completed: false, inSearch: true },
-   { id: 7, info: 'data 8', completed: true, inSearch: true },
-   { id: 8, info: 'data 9', completed: false, inSearch: true }
+   { id: 0, info: 'Task 1', completed: true, inSearch: true },
+   { id: 1, info: 'Task 2', completed: false, inSearch: true },
+   { id: 2, info: 'Task 3', completed: false, inSearch: true },
+   { id: 3, info: 'Task 4', completed: false, inSearch: true },
+   { id: 4, info: 'Task 5', completed: true, inSearch: true },
+   { id: 5, info: 'Task 6', completed: true, inSearch: true },
+   { id: 6, info: 'Task 7', completed: false, inSearch: true },
+   { id: 7, info: 'Task 8', completed: true, inSearch: true },
+   { id: 8, info: 'Task 9', completed: false, inSearch: true }
 ];
 
 export default function Home() {
