@@ -4,6 +4,7 @@ import Task from "../Task/Task";
 import Title from "../Title/Title";
 import Search from "../Search/Search";
 import style from "./TaskList.module.css";
+import { FaAngleDoubleDown } from "react-icons/fa";
 
 export default function TodoList({ completed }) {
     const tasksLoaded = useContext(TaskContext);
@@ -14,6 +15,7 @@ export default function TodoList({ completed }) {
             return <Title text="There are no tasks."></Title>
         } else {
             return <ul className={style.list}>
+                <span className={style.titleContainer}><FaAngleDoubleDown /> <Title text={completed ? "Completed" : "Ongoing"} className={style.title} /> <FaAngleDoubleDown /></span>
                 <Search completed={completed} />
                 {
                     tasks.map((task) => {

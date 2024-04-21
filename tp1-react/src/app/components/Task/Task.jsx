@@ -6,11 +6,9 @@ import { FaCheckCircle, FaMinusCircle, FaClipboardList } from "react-icons/fa";
 
 export default function Task({ task, hasButtons }) {
    const dispatch = useContext(TaskDispatchContext);
-   let state = "COMPLETED";
    let buttons = <></>;
 
    if (hasButtons === false) {
-      state = "IN PROGRESS";
       buttons = <div className={taskStyle.btns}><Button text={<FaCheckCircle className={taskStyle.icon} />} className={taskStyle.btnTop} onClickFn={() => {
          dispatch({
             type: 'complete',
@@ -28,7 +26,7 @@ export default function Task({ task, hasButtons }) {
    return (<li className={taskStyle.card}>
       <span className={hasButtons ? taskStyle.taskCom : taskStyle.taskProc}>
          {hasButtons ? <FaClipboardList className={taskStyle.iconCom} /> : <FaClipboardList className={taskStyle.iconProc} />}
-         {task.info} : {state}
+         {task.info}
       </span>
       {buttons}
    </li >);

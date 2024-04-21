@@ -4,6 +4,19 @@
    max-height: 80vh;
 }
 
+.titleContainer {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.title {
+   font-size: 2em;
+   margin: 0 0 0.2em 0;
+}
+
 /* Medium display */
 @media all and (min-width: 765px) {
    .list {
