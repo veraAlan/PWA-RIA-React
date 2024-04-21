@@ -11,24 +11,29 @@ export default function CreateTask() {
     const dispatch = useContext(TaskDispatchContext);
     const [inputValue, setInputValue] = useState('');
 
+    const handleTaskCreate = () => {
+        setInputValue('');
+        dispatch({
+            type: 'create',
+            id: nextId++,
+            info: inputValue,
+            completed: false
+        });
+    }
+
     return (<div className={create.container}>
         <Toast message="Add a description to create a task." />
         <Input placeholder="Write a description..."
             className={create.input}
             value={inputValue}
-            onChangeHandler={e => setInputValue(e.target.value)}
+            onKeyDownHandler={e => { if (e.key === 'Enter') handleTaskCreate(); }}
+            onChangeHandler={e => { setInputValue(e.target.value) }}
         />
         <Button text="Create"
             className={create.btn}
             onClickFn={() => {
                 if (inputValue !== '') {
-                    setInputValue('');
-                    dispatch({
-                        type: 'create',
-                        id: nextId++,
-                        info: inputValue,
-                        completed: false
-                    });
+                    handleTaskCreate();
                 } else {
                     handleToast();
                 }

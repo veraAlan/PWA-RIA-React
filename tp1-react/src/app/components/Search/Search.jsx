@@ -8,12 +8,15 @@ import style from "./Search.module.css";
 export default function Search({ completed }) {
    const dispatch = useContext(TaskDispatchContext);
 
-   return (<div className={style.searchbox}><Input placeholder='Search a task here...' className={style.input} onChangeHandler={(e) => {
-      dispatch({
-         type: 'search',
-         query: e.target.value,
-         completed: completed
-      });
-   }} />
+   return (<div className={style.searchbox}><Input
+      placeholder='Search a task here...'
+      className={style.input}
+      onChangeHandler={(e) => {
+         dispatch({
+            type: 'search',
+            query: e.target.value,
+            completed: completed
+         });
+      }} />
    </div>);
 }
