@@ -4,7 +4,6 @@ import Title from "../../components/Title/Title";
 import TaskList from "../../components/TaskList/TaskList";
 import CreateTask from "../../components/CreateTask/CreateTask";
 import Counter from "../../components/Counter/Counter";
-import Search from '../../components/Search/Search';
 import { TaskContext, TaskDispatchContext } from '../../components/TaskContext/TaskContext';
 import { FaClipboardList } from "react-icons/fa";
 
@@ -12,15 +11,15 @@ import { FaClipboardList } from "react-icons/fa";
 import style from "./Home.module.css";
 
 const initialTasks = [
-   { id: 0, info: 'data 1', completed: true },
-   { id: 1, info: 'data 2', completed: false },
-   { id: 2, info: 'data 3', completed: false },
-   { id: 3, info: 'data 4', completed: false },
-   { id: 4, info: 'data 5', completed: true },
-   { id: 5, info: 'data 6', completed: true },
-   { id: 6, info: 'data 7', completed: false },
-   { id: 7, info: 'data 8', completed: true },
-   { id: 8, info: 'data 9', completed: false }
+   { id: 0, info: 'data 1', completed: true, inSearch: true },
+   { id: 1, info: 'data 2', completed: false, inSearch: true },
+   { id: 2, info: 'data 3', completed: false, inSearch: true },
+   { id: 3, info: 'data 4', completed: false, inSearch: true },
+   { id: 4, info: 'data 5', completed: true, inSearch: true },
+   { id: 5, info: 'data 6', completed: true, inSearch: true },
+   { id: 6, info: 'data 7', completed: false, inSearch: true },
+   { id: 7, info: 'data 8', completed: true, inSearch: true },
+   { id: 8, info: 'data 9', completed: false, inSearch: true }
 ];
 
 export default function Home() {
@@ -37,11 +36,9 @@ export default function Home() {
                </div>
                {/* Correct style, ir goes over the screen on the bottom of the list. */}
                <div className={`${style.containerItem} ${style.tasks}`}>
-                  <Search completed={false} />
                   <TaskList completed={false} />
                </div>
                <div className={`${style.containerItem} ${style.tasks}`}>
-                  <Search completed={true} />
                   <TaskList completed={true} />
                </div>
             </div>
@@ -67,7 +64,18 @@ function taskReducer(tasks, action) {
       case 'delete':
          return tasks.filter((task) => task.id !== action.id);
       case 'search':
-         return '';
+         if (action.query) {
+            console.log('Shoot query. | ',);
+            return tasks.map((task) => {
+               if (task.completed === action.completed) {
+                  task.info.includes(action.query) ? task.inSearch = true : task.inSearch = false;
+               }
+               return task;
+            });
+         } else {
+            console.log('Shoot null query. | ',);
+            return tasks.map((task) => { task.inSearch = true; return task; });
+         }
       default: {
          throw Error('Unknown action: ' + action.type);
       }

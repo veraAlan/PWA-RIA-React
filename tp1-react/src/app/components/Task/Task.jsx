@@ -26,7 +26,10 @@ export default function Task({ task, hasButtons }) {
    }
 
    return (<li className={taskStyle.card}>
-      <span className={hasButtons ? taskStyle.taskCom : taskStyle.taskProc}> {hasButtons ? <FaClipboardList className={taskStyle.iconCom} /> : <FaClipboardList className={taskStyle.iconProc} />} {task.info} : {state}</span>
+      <span className={hasButtons ? taskStyle.taskCom : taskStyle.taskProc}>
+         {hasButtons ? <FaClipboardList className={taskStyle.iconCom} /> : <FaClipboardList className={taskStyle.iconProc} />}
+         {task.info} : {state}
+      </span>
       {buttons}
    </li >);
 }
