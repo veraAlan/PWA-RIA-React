@@ -65,7 +65,6 @@ function taskReducer(tasks, action) {
          return tasks.filter((task) => task.id !== action.id);
       case 'search':
          if (action.query) {
-            console.log('Shoot query. | ',);
             return tasks.map((task) => {
                if (task.completed === action.completed) {
                   task.info.includes(action.query) ? task.inSearch = true : task.inSearch = false;
@@ -73,7 +72,6 @@ function taskReducer(tasks, action) {
                return task;
             });
          } else {
-            console.log('Shoot null query. | ',);
             return tasks.map((task) => { task.inSearch = true; return task; });
          }
       default: {
