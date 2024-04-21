@@ -26,7 +26,14 @@ export default function CreateTask() {
         <Input placeholder="Write a description..."
             className={create.input}
             value={inputValue}
-            onKeyDownHandler={e => { if (e.key === 'Enter') handleTaskCreate(); }}
+            onKeyDownHandler={e => {
+                if (e.key === 'Enter' && inputValue !== '') {
+                    handleTaskCreate();
+                } else {
+                    // TODO Handle toast call.
+                    // handleToast();
+                }
+            }}
             onChangeHandler={e => { setInputValue(e.target.value) }}
         />
         <Button text="Create"
@@ -35,7 +42,7 @@ export default function CreateTask() {
                 if (inputValue !== '') {
                     handleTaskCreate();
                 } else {
-                    handleToast();
+                    // handleToast();
                 }
             }}
         />
